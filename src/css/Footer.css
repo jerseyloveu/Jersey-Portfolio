@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+/* Footer Styles */
+.footer {
+  background-color: #000000;
+  color: white;
+  font-family: 'Archivo', sans-serif;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at the start */
+  flex-wrap: wrap;
+  gap: 20px; /* Add gap between footer sections */
+}
+
+.footer-left, .footer-address, .footer-phone-email, .footer-follow {
+  flex: 1; /* Allow sections to grow equally */
+  min-width: 200px; /* Ensure a minimum width for better layout */
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Align logo and name vertically */
+  justify-content: center; /* Center content horizontally */
+  gap: 10px; /* Adjust gap between logo and name */
+}
+
+.footer-logo {
+  width: 100px; /* Set a fixed width for the logo */
+  height: 100px; /* Set a fixed height for the logo */
+  object-fit: contain;
+}
+
+.footer-name {
+  font-size: 28px; /* Increased font size for better visibility */
+  font-weight: bold;
+  font-family: 'Archivo', sans-serif;
+  margin: 0; /* Remove default margin */
+  margin-right: 10px;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.footer-address p,
+.footer-phone-email p {
+  font-size: 16px;
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color and underline */
+}
+
+/* Add hover effect for address, email, phone, and follow me text */
+.footer-address p:hover,
+.footer-phone-email p:hover,
+.footer-follow p:hover {
+  color: #c73c30; /* Change color on hover */
+  text-decoration: underline; /* Underline text on hover */
+}
+
+.map {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+
+.footer-follow .social-icons {
+  display: flex;
+  gap: 20px; /* Increased gap between social icons */
+  justify-content: flex-start; /* Align icons to the start */
+}
+
+.social-icon {
+  margin-top: 10px;
+  font-size: 32px; /* Increased icon size for better visibility */
+  color: white;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: #c73c30;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-address,
+  .footer-phone-email,
+  .footer-follow {
+    width: 80%; /* Stack content vertically and make it wider for mobile */
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 100px; /* Maintain larger logo size for mobile */
+    height: 100px;
+  }
+
+  .footer-name {
+    font-size: 20px;
+  }
+
+  .footer-title {
+    font-size: 16px;
+  }
+
+  .footer-address iframe {
+    width: 100%;
+    height: 200px;
+  }
+
+  /* Center icons on smaller screens */
+  .footer-follow .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-left {
+    display: flex;
+    justify-content: center; /* Center logo and name horizontally */
+    align-items: center; /* Center them vertically */
+  }
+}

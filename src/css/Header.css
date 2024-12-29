@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #000000; /* 100% black background */
+  color: white;
+  position: relative; /* Necessary for positioning sparkle effect */
+  overflow: hidden; /* Prevent sparkle effect from spilling outside */
+}
+
+.header-left .logo {
+  height: 80px; /* Increased height for better visibility */
+  object-fit: contain; /* Ensure logo image is fully visible */
+}
+
+.header-center {
+  flex-grow: 1; /* Allow center to take up remaining space */
+  display: flex;
+  justify-content: center; /* Center align "Jersey Usman" */
+}
+
+.header-center .home-link {
+  color: white;
+  font-family: 'Archivo', sans-serif; /* Use Archivo font */
+  font-weight: bold;
+  font-size: 36px; /* Larger font for "Jersey Usman" */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header-center .home-link:hover {
+  color: #c73c30;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.welcome-text {
+  font-size: 20px; /* Bigger font for "Welcome , Guest" */
+  font-weight: bold; /* Make "Welcome, Guest" bold */
+  font-family: 'Archivo', sans-serif; /* Use Archivo font */
+  margin-left: 10px; /* Add some space between the icon and the welcome text */
+}
+
+/* User Icon Styles */
+.user-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Larger circular icon size */
+  height: 50px;
+  border: 2px solid white; /* Circle border */
+  border-radius: 50%; /* Make it circular */
+  cursor: pointer; /* Add pointer cursor on hover */
+}
+
+.user-icon {
+  color: white;
+  font-size: 24px; /* Larger icon inside the circle */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header-left .logo {
+    height: 60px; /* Adjust logo size for smaller screens */
+  }
+
+  .header-center .home-link {
+    font-size: 28px; /* Adjust font size for smaller screens */
+  }
+
+  .welcome-text {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    display: block; /* Show the welcome message on small screens when clicked */
+  }
+
+  .user-icon-container {
+    width: 40px; /* Smaller circular icon for smaller screens */
+    height: 40px;
+  }
+
+  .user-icon {
+    font-size: 20px; /* Adjust icon size inside the circle */
+  }
+}
+
+/* Sparkle Effect - Mouse tracking */
+#header {
+  cursor: pointer; /* Show a pointer cursor on hover */
+}
+
+.sparkle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  animation: sparkle-animation 0.8s forwards;
+  pointer-events: none;
+  transform: scale(0);
+}
+
+@keyframes sparkle-animation {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
